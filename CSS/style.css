@@ -82,18 +82,32 @@ nav ul li a:hover::after {
 
 /* Estilo da seção do Inicio */
 .main-content {
-    background-color: #fff;
+    background-image: url('../HTML/Assets/Background\ Main.png'); /* Adicione o caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    position: relative;
+    display: flex; /* Facilita o alinhamento de conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-start; /* Ajusta o alinhamento horizontal, se necessário */
 }
 
 .text-container {
-    max-width: 600px;
-    text-align: left;
-    margin-left: 60px;
+    position: relative; /* Para funcionar com z-index */
+    z-index: 2; /* Garante que está acima do filtro */
+    color: #fff; /* Texto branco para contraste */
+    margin-left: 10%; /* Ajuste conforme necessário */
+    text-align: left; /* Alinhamento do texto */
+}
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.5); /* Filtro cinza translúcido */
+    z-index: 1; /* Filtro atrás do texto e botão */
 }
 .main-content h1 {
     font-size: 32px;
@@ -105,7 +119,7 @@ nav ul li a:hover::after {
 .main-content h1 {
     font-size: 42px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
 }
 
 .cta-btn {
@@ -114,7 +128,7 @@ nav ul li a:hover::after {
     font-size: 18px;
     color: #fff;
     background-color: #28a745;
-    border: 2px solid #28a745;
+    border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
@@ -177,6 +191,13 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.card_atuacao .icon {
+    width: 80px; /* Tamanho do ícone */
+    height: auto;
+    margin-bottom: 10px; /* Espaço entre o ícone e o texto */
 }
 
 .card_atuacao button {
@@ -283,9 +304,10 @@ html {
 
 .team-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 40px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Coloca os cards de forma responsiva */
+    gap: 40px; /* Define um espaçamento consistente entre os cards */
+    justify-items: center; /* Centraliza horizontalmente os cards */
+    align-items: start; /* Garante que todos os cards alinhem-se no topo */
 }
 
 .card {
@@ -300,16 +322,29 @@ html {
     box-shadow: 0 10px 18px rgb(107, 107, 107);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.team-cards .card:nth-child(3) .photo img {
+    max-width: 100%; /* Limita a largura da imagem */
+    max-height: 100%; /* Limita a altura da imagem */
+    object-fit: initial;
+}
 
 .card .photo {
-    background-color: #8f8e8e; 
+    width: 100%; /* Garante que o bloco de fotos ocupe toda a largura */
     height: 250px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: #595757;
-    margin-bottom: 15px;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #8f8e8e;
+    position: relative;
+}
+
+.card .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .card .info {
@@ -377,47 +412,53 @@ html {
 
 .blog-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-items: center;
+    margin-top: 20px;
 }
 
 .blog-card {
     background-color: #fff;
-    width: 280px;
-    height: 400px; 
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
 }
 
-
-
-/* Imagem do card */
 .blog-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    margin-bottom: 15px;
 }
 
 .blog-title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900; 
     font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 .blog-description {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400; 
     font-size: 14px;
-    color: #595757;
-    margin-bottom: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.ver-mais a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ver-mais a:hover {
+    background-color: #227534;
 }
 
 .blog-card:hover {
@@ -427,6 +468,28 @@ html {
 .blog-card a {
     text-decoration: none; 
     color: inherit;
+}
+
+/* Estilo para a Pagina blog */
+
+.voltar-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.btn-voltar:hover {
+    background-color: #227534;
 }
 
 
@@ -449,8 +512,17 @@ html {
 
 .contato-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    align-items: center; /* Centraliza os elementos */
+}
+
+.mapa {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 800px; /* Define uma largura máxima */
+    height: 350px; /* Altura fixa */
+     /* Centraliza o mapa e adiciona espaço inferior */
+    display: flex; /* Garante o alinhamento */
+    justify-content: center; /* Centraliza o conteúdo dentro do bloco */
 }
 
 .contato-info .mapa {
@@ -459,6 +531,7 @@ html {
     height: 500px; 
     margin-right: 20px;
 }
+
 
 .contato-info .detalhes {
     width: 40%;
@@ -480,62 +553,51 @@ html {
     margin-bottom: 10px;
 }
 
+/* Rodapé */
+
 .rodape {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
+    background-color: #2a2a2a;
+    color: #ffffff;
     text-align: center;
-    
+    padding: 20px 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.rodape-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide o rodapé em 3 colunas */
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.rodape-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.rodape-left,
-.rodape-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    padding: 44px;
-}
-
+.rodape-contact,
 .rodape-links,
-.rodape-rede-social,
-.rodape-leis,
-.rodape-direitos {
-    margin-bottom: 20px;
-    width: 100%;
+.rodape-social,
+.rodape-legal {
+    margin-bottom: 10px;
 }
 
-.rodape-links a,
-.rodape-rede-social a,
-.rodape-leis a,
-.rodape-direitos p {
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 10px 0;
+.rodape-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-links ul li {
+    margin: 5px 0;
+}
+
+.rodape-links ul li a,
+.rodape-social a {
+    color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-.rodape-links a:hover,
-.rodape-rede-social a:hover,
-.rodape-leis a:hover,
-.rodape-direitos p:hover {
-    color: #FFD700; /* ATENÇÃO Cor amarela no hover */
-}
-
-.rodape-rede-social,
-.rodape-leis {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+.rodape-links ul li a:hover,
+.rodape-social a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
 }
 
 .rodape-direitos {

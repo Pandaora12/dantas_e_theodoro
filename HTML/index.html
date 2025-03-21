@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="#">Logo</a> <!-- Logn Indefinida então por isso não está aplicada ainda -->
+                <a href="#"><img src="./Assets/Logo Dourada.png" alt=""></a> <!-- Logn Indefinida então por isso não está aplicada ainda -->
             </div>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -41,27 +41,31 @@
         
         <div class="grid-areas">
             <div class="card_atuacao">
-                <h4>Direito Penal</h4>
-                <button>Saiba mais</button>
-            </div>
-            <div class="card_atuacao">
+                <img src="./Assets/Icons areaAtuação/algemas.png" alt="Ícone Direito Penal" class="icon">
                 <h4>Direito Criminal</h4>
                 <button>Saiba mais</button>
             </div>
             <div class="card_atuacao">
+                <img src="./Assets/Icons areaAtuação/direito-civil.png" alt="Ícone Direito Penal" class="icon">
                 <h4>Direito Civil</h4>
                 <button>Saiba mais</button>
             </div>
             <div class="card_atuacao">
-                <h4>Direito de Família</h4>
+                <h4>Direito previdenciário</h4>
                 <button>Saiba mais</button>
             </div>
             <div class="card_atuacao">
-                <h4>Direito Imobiliário</h4>
+                <img src="./Assets/Icons areaAtuação/os-direitos-dos-trabalhadores.png" alt="Ícone Direito Penal" class="icon">
+                <h4>Direito trabalhista </h4>
                 <button>Saiba mais</button>
             </div>
             <div class="card_atuacao">
-                <h4>Atendimento Flagrante Criminal 24 Horas</h4>
+                <img src="./Assets/Icons areaAtuação/cuidados-de-saude.png" alt="Ícone Direito Penal" class="icon">
+                <h4>Direito da saúde</h4>
+                <button>Saiba mais</button>
+            </div>
+            <div class="card_atuacao">
+                <h4>Atendimento 24 Horas</h4>
                 <button>Saiba mais</button>
             </div>
         </div>
@@ -88,7 +92,9 @@
         <h1>Nossa Equipe</h1>
         <div class="team-cards">
             <div class="card">
-                <div class="photo">FOTO</div>
+                <div class="photo">
+                    <img src="./Assets/Kawe.png" alt="Dr.Kawe">
+                </div>      
                 <div class="info">
                     <p class="name">Dr. Kawe Dantas</p>
                     <p class="role">CEO e Sócio Fundador</p>
@@ -96,7 +102,9 @@
                 </div>
             </div>
             <div class="card">
-                <div class="photo">FOTO</div>
+                <div class="photo">
+                    <img src="./Assets/Pedro.png" alt="Dr.Pedro">
+                </div>
                 <div class="info">
                     <p class="name">Dr. Pedro Ivo</p>
                     <p class="role">CEO e Sócio Fundador</p>
@@ -104,7 +112,9 @@
                 </div>
             </div>
             <div class="card">
-                <div class="photo">FOTO</div>
+                <div class="photo">
+                    <img src="./Assets/Mariane.png" alt="Dra.Mariane">
+                </div>
                 <div class="info">
                     <p class="name">Dra. Mariane M. M</p>
                     <p class="role">Advogada - Associada</p>
@@ -112,7 +122,9 @@
                 </div>
             </div>
             <div class="card">
-                <div class="photo">FOTO</div>
+                <div class="photo">
+                    <img src="./Assets/Debora.png" alt="Debora">
+                </div>
                 <div class="info">
                     <p class="name">Debora Ferreira</p>
                     <p class="role">Assistente Jurídica</p>
@@ -124,81 +136,99 @@
 
     <!-- Seção de Blog -->
     <section id="blog" class="blog">
-    <h1>Confira Nosso Blog</h1>
-    <p>Mantenha-se atualizado com nosso conteúdo especializado.</p>
-    <div class="blog-cards">
-        <div class="blog-card">
-            <a href="link-do-blog-1.html">
-                <img src="imagem-blog-1.jpg" alt="Blog 1">
-                <p class="blog-title">Garantindo o Direito à Vida: Obrigação do Estado...</p>
-                <p class="blog-description">Em meio aos desafios do sistema de saúde pública, surge uma questão crucial...</p>
-            </a>
+        <h1>Confira Nosso Blog</h1>
+        <p>Mantenha-se atualizado com nosso conteúdo especializado.</p>
+        <div class="blog-cards">
+            <!-- Blog 1 -->
+            <div class="blog-card">
+                <a href="link-do-blog-1.html">
+                    <img src="./Assets/blog-1.jpg" alt="Imagem do Blog 1">
+                    <p class="blog-title">Título do Blog 1</p>
+                    <p class="blog-description">Descrição breve do blog 1...</p>
+                </a>
+            </div>
+            <!-- Blog 2 -->
+            <div class="blog-card">
+                <a href="link-do-blog-2.html">
+                    <img src="./Assets/blog-2.jpg" alt="Imagem do Blog 2">
+                    <p class="blog-title">Título do Blog 2</p>
+                    <p class="blog-description">Descrição breve do blog 2...</p>
+                </a>
+            </div>
+            <!-- Blog 3 -->
+            <div class="blog-card">
+                <a href="link-do-blog-3.html">
+                    <img src="./Assets/blog-3.jpg" alt="Imagem do Blog 3">
+                    <p class="blog-title">Título do Blog 3</p>
+                    <p class="blog-description">Descrição breve do blog 3...</p>
+                </a>
+            </div>
         </div>
-        <div class="blog-card">
-            <a href="link-do-blog-2.html">
-                <img src="imagem-blog-2.jpg" alt="Blog 2">
-                <p class="blog-title">Desvendando o Mistério das Horas Extras: Quem Tem o Direito?</p>
-                <p class="blog-description">Olá, caros leitores! Hoje, vamos adentrar no complexo universo das horas extras...</p>
-            </a>
+        <div class="ver-mais">
+            <a href="./Blog/pagina-noticias.html">Ver Todos os Blogs</a>
         </div>
-        <div class="blog-card">
-            <a href="link-do-blog-3.html">
-                <img src="imagem-blog-3.jpg" alt="Blog 3">
-                <p class="blog-title">Entenda a Concessão de Liberdade Provisória: Requisitos e Fundamentos Jurídicos</p>
-                <p class="blog-description">Você sabia que a concessão de liberdade provisória é um direito garantido pela legislação...</p>
-            </a>
-        </div>
-    </div>
     </section>
+    
 
     <!-- Seção de Contato -->
     <section id="contato" class="contato">
     <h1>ESCRITÓRIO</h1>
     <div class="contato-info">
         <div class="mapa">
-            <div class="local">Mapa do Local</div> <!-- Aqui você pode adicionar o Google Maps -->
+            <div class="local">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.851584154181!2d-46.56183943779956!3d-23.12589223085225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec1400638e681%3A0x86ad1a85722e3226!2sEscrit%C3%B3rio%20de%20Advocacia%20em%20Atibaia%20%7C%20Dantas%20%26%20Theodoro%20%7C%20Advogados%20%7C%20Direito%20Criminal%20%7C%20Direito%20Civil%20%7C%20Direito%20de%20Familia!5e0!3m2!1spt-BR!2sbr!4v1742565197625!5m2!1spt-BR!2sbr" 
+                width="1200" 
+                height="502" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div> <!-- Aqui você pode adicionar o Google Maps -->
         </div><br>
+        <!-- Contatos abaixo do mapa -->
         <div class="detalhes">
             <h3>Contato</h3>
             <p>IC (xx) xxxxx-xxxx</p>
             <p>IC (xx) xxxxx-xxxx</p>
-            <p>email: dantas@gmail.com</p>
+            <p>Email: dantas@gmail.com</p>
         </div>
     </div>
     </section>
 
 <!-- Rodapé -->
-    <footer class="rodape">
-    <div class="rodape-content">
-        <!-- Seções à esquerda -->
-        <div class="rodape-left">
-            <div class="rodape-links">
-                <p>texto 1</p>
-                <p>texto 2</p>
-                <p>texto 3</p>
-                <p>texto 4</p>
-                <p>texto 5</p>
-            </div>
+<footer class="rodape">
+    <div class="rodape-container">
+        <!-- Contatos -->
+        <div class="rodape-contact">
+            <p>📞 (11) 1234-5678 | 📧 contato@escritorioadvogado.com</p>
+        </div>
+        
+        <!-- Links rápidos -->
+        <div class="rodape-links">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#areas-atuacao">Áreas de Atuação</a></li>
+                <li><a href="#blog">Blog Jurídico</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </div>
 
-        <!-- Seções à direita -->
-        <div class="rodape-right">
-            <div class="rodape-rede-social">
-                <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-                <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            </div>
-            <div class="rodape-leis">
-                <a href="https://www.jusbrasil.com.br/" target="_blank">Leis Brasileiras</a>
-            </div>
+        <!-- Redes sociais -->
+        <div class="rodape-social">
+            <a href="https://www.linkedin.com/in/seuperfil" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/seuperfil" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/seuperfil" target="_blank">Facebook</a>
         </div>
 
-        <!-- Direitos do site centralizados -->
-        <div class="rodape-direitos">
-            <p>&copy; 2024 Todos os direitos reservados</p>
+        <!-- Informações legais -->
+        <div class="rodape-legal">
+            <p>📜 OAB/SP 000000</p>
+            <p>&copy; 2025 Todos os direitos reservados.</p>
         </div>
     </div>
-    </footer>
+</footer>
 
     <!-- WhatsApp Fixo Lado Direito Inferior -->
     <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank">

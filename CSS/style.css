@@ -1,0 +1,728 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Crimson+Text:wght@600&family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Abel&family=Roboto:wght@800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/* Estilizando a NavBar */
+header {
+    background-color: #2a2a2a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: 250px; 
+}
+
+nav ul li {
+    margin-right: 40px; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #ffcc00; 
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00; 
+    transition: width 0.5s ease, left 0.5s ease; 
+}
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 44px;
+    font-weight: bold;
+    margin: 80px;
+    text-decoration: none;
+}
+
+
+
+/* Estilo da seção do Inicio */
+.main-content {
+    background-color: #fff;
+    height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.text-container {
+    max-width: 600px;
+    text-align: left;
+    margin-left: 60px;
+}
+.main-content h1 {
+    font-size: 32px;
+    font-weight: 900; 
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.main-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cta-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #28a745;
+    border: 2px solid #28a745;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #227534;
+    border-color: #164c21;
+}
+
+
+
+/* Estilo da seção de Áreas de Atuação */
+.areas-atuacao {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    height: 100vh;
+    margin: 0;
+}
+
+.areas-atuacao h3 {
+    font-family: 'Abel', sans-serif;
+    font-size: 22px;
+    color: #666;
+}
+
+.areas-atuacao h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 800; 
+    color: #333;
+    margin-top: 20px;
+}
+
+.areas-atuacao p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.grid-areas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 15px; 
+    justify-items: center;
+}
+
+.card_atuacao {
+    background-color: #1E1E1E; 
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 17px;
+    box-shadow: 0 10px 18px rgb(107, 107, 107);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 220px; 
+    min-height: 280px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card_atuacao button {
+    padding: 10px 20px;
+    background-color: #000000; 
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Animações */
+.card_atuacao button:hover {
+    background-color: #218838;
+}
+
+.card_atuacao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Seção de Quem Somos */
+.quem-somos {
+    background-color: #313232; 
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+
+.quem-somos h1 {
+    font-family: 'Holtwood One SC', serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.quem-somos p {
+    font-family: 'Crimson Text', serif;
+    font-weight: 500; 
+    font-size: 38px;
+    color: #d1d1d1;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.whatsapp-btn {
+    font-family: 'Lalezar', cursive;
+    background-color: #28a745; 
+    color: #fff;
+    font-size: 18px;
+    height: 60px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1c612b; 
+}
+
+.phone-icon {
+    margin-right: 20px; 
+}
+
+
+
+/* Estilo da seção Nossa Equipe */
+
+.nossa-equipe {
+    background-color: #313232; 
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 0;
+    height: 100vh;
+    width:100%;
+}
+
+.nossa-equipe h1 {
+    font-family: 'Holtwood One SC', serif; 
+    font-size: 36px;
+    font-weight: 800; 
+    color: #FFFFFF; 
+    margin-bottom: 80px;
+}
+
+
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    width: 250px;
+    height: 380px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 18px rgb(107, 107, 107);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card .photo {
+    background-color: #8f8e8e; 
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #595757;
+    margin-bottom: 15px;
+}
+
+.card .info {
+    border-top: 1px solid #ddd; 
+    padding-top: 10px;
+}
+
+.card .name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; 
+    font-size: 18px;
+    color: #0C0C0C; 
+    margin-bottom: 10px;
+}
+
+.card .role {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; 
+    font-size: 16px;
+    color: #595757; 
+    margin-bottom: 5px;
+}
+
+.card .oab {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; 
+    font-size: 14px;
+    color: #595757; 
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Estilo para a seção Blog */
+.blog {
+    background-color: #f8f8f8; 
+    text-align: center;
+    padding: 100px 20px;
+    height: 100vh;
+}
+
+.blog h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; 
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.blog p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; 
+    font-size: 16px;
+    color: #595757;
+    margin-bottom: 40px;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    justify-items: center;
+}
+
+.blog-card {
+    background-color: #fff;
+    width: 280px;
+    height: 400px; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Imagem do card */
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.blog-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; 
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    font-size: 14px;
+    color: #595757;
+    margin-bottom: 20px;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px); 
+}
+
+.blog-card a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+
+
+/* Estilo da Seção de Contato */
+.contato {
+    background-color: #f8f8f8;
+    padding: 100px 90px;
+    text-align: center;
+    height: 100vh;
+}
+
+.contato h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; 
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contato-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contato-info .mapa {
+    background-color: #D1D1D1;
+    width: 80%;
+    height: 500px; 
+    margin-right: 20px;
+}
+
+.contato-info .detalhes {
+    width: 40%;
+}
+
+.contato-info .detalhes h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; 
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contato-info .detalhes p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    font-size: 16px;
+    color: #595757;
+    margin-bottom: 10px;
+}
+
+.rodape {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    
+}
+
+.rodape-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rodape-left,
+.rodape-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 44px;
+}
+
+.rodape-links,
+.rodape-rede-social,
+.rodape-leis,
+.rodape-direitos {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.rodape-links a,
+.rodape-rede-social a,
+.rodape-leis a,
+.rodape-direitos p {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.rodape-links a:hover,
+.rodape-rede-social a:hover,
+.rodape-leis a:hover,
+.rodape-direitos p:hover {
+    color: #FFD700; /* ATENÇÃO Cor amarela no hover */
+}
+
+.rodape-rede-social,
+.rodape-leis {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.rodape-direitos {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+
+
+
+/* Botão Zap FIXO */
+.whatsapp-float {
+    position: fixed;
+    width: 70px; 
+    height: 70px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.whatsapp-float img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+#backToTop {
+    position: fixed;
+    bottom: 100px; 
+    right: 34px;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+    /* Ajuste para rodapé */
+    .rodape-content {
+        padding: 20px;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-left,
+    .rodape-right {
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .rodape-rede-social,
+    .rodape-leis {
+        align-items: center;
+        gap: 5px;
+    }
+
+    .rodape-direitos {
+        text-align: center;
+    }
+
+    /* Seção "Quem Somos" */
+    .quem-somos h1 {
+        font-size: 24px;
+    }
+
+    .quem-somos p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    /* Ajuste para a Navbar */
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Responsividade para celulares menores */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 30px 15px;
+        justify-content: center;
+    }
+
+    .text-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Cards de áreas de atuação */
+    .grid-areas {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+
+    /* Cards de equipe */
+    .team-cards {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Cards de blog */
+    .blog-cards {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Ajuste para rodapé */
+    .rodape-left,
+    .rodape-right {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Responsividade para celulares muito pequenos */
+@media (max-width: 480px) {
+
+    .main-content h1 {
+        font-size: 22px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .blog-card {
+        width: 90%; 
+    }
+
+    .quem-somos h1 {
+        font-size: 20px;
+    }
+
+    .quem-somos p {
+        font-size: 14px;
+    }
+}
+
